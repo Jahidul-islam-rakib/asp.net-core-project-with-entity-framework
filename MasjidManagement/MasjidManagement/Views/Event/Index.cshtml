@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MasjidManagement.Models.Event>
+
+@{
+	ViewData["Title"] = "Event List";
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Event Id</th>
+			<th>Event Name</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model){
+			<tr>
+				<td>@item.EventId</td>
+				<td>@item.EventName</td>
+				<td>@item.Location</td>
+			</tr>
+		}
+	</tbody>
+
+</table>

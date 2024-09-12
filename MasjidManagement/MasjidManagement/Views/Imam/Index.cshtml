@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MasjidManagement.Models.Imam>
+
+@{
+	ViewData["Title"] = "Imam List";
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Imam Name</th>
+			<th>Qualifictaion</th>
+			<th>Hiring Date</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.ImamName</td>
+				<td>@item.Qualification</td>
+				<td>@item.HireDate</td>
+			</tr>
+		}
+	</tbody>
+</table>

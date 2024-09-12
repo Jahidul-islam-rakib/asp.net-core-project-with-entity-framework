@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MasjidManagement.Models.Volunteer>
+
+@{
+	ViewData["title"] = "Volunteer List";
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Volunteer Name</th>
+			<th>Role</th>
+			<th>contact Number</th>
+
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.VName</td>
+				<td>@item.VRole</td>
+				<td>@item.VContactNumber</td>
+			</tr>
+		}
+	</tbody>
+</table>

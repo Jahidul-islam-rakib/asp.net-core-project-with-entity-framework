@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MasjidManagement.Models.Donation>
+
+@{
+	ViewData["Title"] = "Donor List";
+}
+
+<h1>
+	Donor List
+</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Donor Name</th>
+			<th>Amount</th>
+			<th>Donation Date</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.DonorName</td>
+				<td>@item.Amount</td>
+				<td>@item.DonationDate</td>
+
+			</tr>
+		}
+	</tbody>
+
+</table>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasjidManagement", "MasjidManagement\MasjidManagement.csproj", "{F247C185-E9A8-4BB1-9AC1-DFEA6C83C656}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F247C185-E9A8-4BB1-9AC1-DFEA6C83C656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F247C185-E9A8-4BB1-9AC1-DFEA6C83C656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F247C185-E9A8-4BB1-9AC1-DFEA6C83C656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F247C185-E9A8-4BB1-9AC1-DFEA6C83C656}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE19432B-4118-4A53-B96C-A33712072DD4}
+	EndGlobalSection
+EndGlobal

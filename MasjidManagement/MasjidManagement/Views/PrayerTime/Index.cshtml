@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MasjidManagement.Models.PrayerTime>
+
+@{
+	ViewData["title"] = "Prayer Schedule";
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Prayer Name</th>
+			<th>Star Time</th>
+			<th>End Time</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.PrayerName</td>
+				<td>@item.PrayerStart</td>
+				<td>@item.PrayerEnd</td>
+			</tr>
+		}
+	</tbody>
+</table>
