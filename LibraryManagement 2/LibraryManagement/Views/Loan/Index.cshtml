@@ -1,0 +1,28 @@
+﻿@model IEnumerable<LibraryManagement.Models.Loan>
+
+@{
+	ViewData["Title"] = "Book Loan";
+}
+
+	<h1>Loan Details</h1>
+
+	<table class="table">
+		<thed>
+			<tr>
+			<th>Book ID</th>
+			<th>Member ID</th>
+			<th>Due Date</th>
+		</tr>
+		</thed>
+
+		<tbody>
+			@foreach(var item in Model)
+			{
+			<tr>
+				<td>@item.BookId</td>
+				<td>@item.MemberId</td>
+				<td>@item.DueDate</td>
+			</tr>
+		}
+		</tbody>
+	</table>

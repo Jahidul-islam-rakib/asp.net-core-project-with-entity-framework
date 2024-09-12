@@ -1,0 +1,26 @@
+﻿@model IEnumerable<LibraryManagement.Models.Staff>
+
+@{
+	ViewData["Title"] = "Staff List";
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Staff Id</th>
+			<th>Staff Name</th>
+			<th>Staff Position</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.StaffId</td>
+				<td>@item.StaffName</td>
+				<td>@item.StaffPosition</td>
+			</tr>
+		}
+	</tbody>
+</table>

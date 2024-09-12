@@ -1,0 +1,26 @@
+﻿@model IEnumerable<LibraryManagement.Models.Category>
+
+@{
+	ViewData["Title"] = "Boook category";
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>description</th>
+			<th>Created date</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.Name</td>
+				<td>@item.Description</td>
+				<td>@item.CreatedDate</td>
+			</tr>
+		}
+	</tbody>
+</table>
