@@ -1,0 +1,29 @@
+﻿@model IEnumerable<UniversityManagement.Models.Professor>
+
+@{
+	ViewData["title"] = "professor list";
+}
+
+<h1>Professor List</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Professor name</th>
+			<th>Department</th>
+			<th>Hiring Date</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.ProfessorName</td>
+				<td>@item.PDepartment</td>
+				<td>@item.PHireDate</td>
+			</tr>
+		}
+	</tbody>
+
+</table>

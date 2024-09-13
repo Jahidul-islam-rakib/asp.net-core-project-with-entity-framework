@@ -1,0 +1,30 @@
+﻿@model IEnumerable<UniversityManagement.Models.Student>
+
+@{
+	ViewData["title"] = "Student List";
+}
+
+<h1>Student List</h1>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Student ID</th>
+			<th>Student Name</th>
+			<th>Enrollment Date</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.StId</td>
+				<td>@item.StFullName</td>
+				<td>@item.StEnrollmentDate</td>
+			</tr>
+		}
+	</tbody>
+
+</table>

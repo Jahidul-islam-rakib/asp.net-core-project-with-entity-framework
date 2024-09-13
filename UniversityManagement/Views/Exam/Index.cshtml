@@ -1,0 +1,28 @@
+﻿@model IEnumerable<UniversityManagement.Models.Exam>
+
+@{
+	ViewData["title"] = "Exam List";
+}
+
+<h1>Exam List</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Exam Name</th>
+			<th>Exam Date</th>
+			<th>Total Marks</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.ExamName</td>
+				<td>@item.ExamDate</td>
+				<td>@item.TotalMarks</td>
+			</tr>
+		}
+	</tbody>
+</table>
