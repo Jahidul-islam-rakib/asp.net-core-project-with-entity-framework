@@ -1,0 +1,40 @@
+﻿@model MasjidManagement.Models.PrayerTime
+
+@{
+	ViewData["title"] = "UpdatePrayerTime";
+}
+
+<h1>Update prayer time</h1>
+
+<hr />
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Update">
+			<input type="hidden" asp-for="Id" />
+
+			<div class="form-group">
+				<label asp-for="PrayerName" class="control-label"></label>
+				<input asp-for="PrayerName" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="PrayerStart" class="control-label"></label>
+				<input asp-for="PrayerStart" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="PrayerEnd" class="control-label"></label>
+				<input asp-for="PrayerEnd" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Save" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index">Back To List</a>
+</div>

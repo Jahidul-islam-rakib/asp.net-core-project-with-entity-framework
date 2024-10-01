@@ -4,6 +4,11 @@
 	ViewData["Title"] = "Imam List";
 }
 
+
+<div class="container mt-4">
+	<a class="btn btn-primary" asp-action="Create" role="button">Create new Imam</a>
+</div>
+
 <table class="table">
 	<thead>
 		<tr>
@@ -20,6 +25,12 @@
 				<td>@item.ImamName</td>
 				<td>@item.Qualification</td>
 				<td>@item.HireDate</td>
+
+				<td>
+					<a class="btn btn-primary" asp-action="Update" asp-route-id="@item.Id">Edit</a>
+					<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+				</td>
 			</tr>
 		}
 	</tbody>

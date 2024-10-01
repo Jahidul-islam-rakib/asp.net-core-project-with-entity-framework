@@ -4,7 +4,7 @@ namespace MasjidManagement.Models
 {
     public class Donation
     {
-        [Key]
+        [Key] public int Id { get; set; }
         public String DonorId { get; set; }
         public String DonorName { get; set; }
         public int Amount { get; set; }

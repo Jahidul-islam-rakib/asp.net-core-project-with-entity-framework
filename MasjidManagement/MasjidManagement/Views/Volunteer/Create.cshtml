@@ -1,0 +1,45 @@
+﻿@model MasjidManagement.Models.Volunteer
+
+@{
+	ViewData["Title"] = "CreateVolunteer";
+}
+
+<h1>Create new volunteer</h1>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Create">
+
+			<div class="form-group">
+				<label asp-for="VId" class="control-label"></label>
+				<input asp-for="VId" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="VName" class="control-label"></label>
+				<input asp-for="VName" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="VRole" class="control-label"></label>
+				<input asp-for="VRole" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="VContactNumber" class="control-label"></label>
+				<input asp-for="VContactNumber" class="form-control" />
+			</div>
+
+
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>

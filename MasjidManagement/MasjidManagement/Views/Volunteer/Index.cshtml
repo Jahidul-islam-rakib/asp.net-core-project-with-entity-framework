@@ -4,6 +4,10 @@
 	ViewData["title"] = "Volunteer List";
 }
 
+<div class="container mt-4">
+	<a class="btn btn-primary" asp-action="Create" role="button">Create new volunteer</a>
+</div>
+
 <table class="table">
 	<thead>
 		<tr>
@@ -21,6 +25,12 @@
 				<td>@item.VName</td>
 				<td>@item.VRole</td>
 				<td>@item.VContactNumber</td>
+
+				<td>
+					<a asp-action="Update" class="btn btn-primary" asp-route-id="@item.Id">Edit</a>
+					<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+				</td>
 			</tr>
 		}
 	</tbody>
