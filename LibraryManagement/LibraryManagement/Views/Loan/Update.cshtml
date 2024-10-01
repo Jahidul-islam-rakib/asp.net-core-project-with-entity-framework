@@ -1,0 +1,41 @@
+﻿@model LibraryManagement.Models.Loan
+
+@{
+	ViewData["title"] = "UpdateLoan";
+}
+
+<h1>Update Loan details</h1>
+
+<hr />
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Update">
+			<input type="hidden" asp-for="Id" />
+
+			<div class="form-group">
+				<label asp-for="BookId" class="control-label"></label>
+				<input asp-for="BookId" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="MemberId" class="control-label" ></label>
+				<input asp-for="MemberId" class="form-control" />
+
+			</div>
+
+			<div class="form-group">
+				<label asp-for="DueDate" class="control-label"></label>
+				<input asp-for="DueDate" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<input class="btn btn-primary" value="save" type="submit" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index" >Back to List</a>
+</div>

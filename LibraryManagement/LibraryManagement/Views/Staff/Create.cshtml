@@ -1,0 +1,39 @@
+﻿@model LibraryManagement.Models.Staff
+
+@{
+	ViewData["Title"] = "StaffCreate";
+}
+
+<h2>Create a staff</h2>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Create">
+
+			<div class="form-group">
+				<label asp-for="StaffName" class="control-label"></label>
+				<input asp-for="StaffName" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="StaffId" class="control-label"></label>
+				<input asp-for="StaffId" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="StaffPosition" class="control-label"></label>
+				<input asp-for="StaffPosition" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>

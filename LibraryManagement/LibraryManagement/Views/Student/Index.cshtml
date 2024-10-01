@@ -1,0 +1,46 @@
+﻿@model IEnumerable<LibraryManagement.Models.Student>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h1>
+	Student Index
+</h1>
+
+<div class="container mt-4">
+	<a class="btn btn-primary" asp-action="Create" role="button">Create New Student</a>
+</div>
+
+<table class="table">
+
+	<thead>
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>address</th>
+			<th>mobile</th> 
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.Name</td>
+				<td>@item.Address</td>
+				<td>@item.Mobile</td>
+
+				<td>
+					<a class="btn btn-primary" asp-action="Update" asp-route-id="@item.Id" >Edit</a>
+					<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+				</td>
+			</tr>
+			
+		}
+
+	</tbody>
+
+</table>

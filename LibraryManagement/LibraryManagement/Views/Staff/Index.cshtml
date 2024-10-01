@@ -1,0 +1,35 @@
+﻿@model IEnumerable<LibraryManagement.Models.Staff>
+
+@{
+	ViewData["Title"] = "Staff List";
+}
+
+<div class="container mt-4">
+	<a class="btn btn-primary" asp-action="Create" role="button">Create new staff</a>
+</div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Staff Id</th>
+			<th>Staff Name</th>
+			<th>Staff Position</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.StaffId</td>
+				<td>@item.StaffName</td>
+				<td>@item.StaffPosition</td>
+
+				<td>
+					<a class="btn btn-primary" asp-action="Update" asp-route-id="@item.Id">Edit</a>
+					<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

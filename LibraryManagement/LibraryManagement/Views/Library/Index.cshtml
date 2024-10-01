@@ -1,0 +1,44 @@
+﻿@model IEnumerable<LibraryManagement.Models.Library>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h1>
+	Library  Index
+</h1>
+
+@* <p>
+	<a asp-action="Create">Create New</a>
+</p> *@
+
+<!-- Bootstrap Primary Button -->
+<div class="container mt-4">
+	<!-- Anchor tag styled as a button with white text and blue background -->
+	<a class="btn btn-primary" asp-action="Create" role="button">Create new</a>
+</div>
+
+<table class="table">
+
+	<thead>
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>address</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.Name</td>
+				<td>@item.Address</td>
+			</tr>
+
+		}
+
+	</tbody>
+
+</table>

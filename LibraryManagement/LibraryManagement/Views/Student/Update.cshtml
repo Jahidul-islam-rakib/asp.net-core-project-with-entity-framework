@@ -1,0 +1,42 @@
+﻿@model LibraryManagement.Models.Student
+
+@{
+	ViewData["Title"] = "UpdateSt";
+}
+
+<h2>Update Student</h2>
+
+<hr />
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Update">
+			<input type="hidden" asp-for="Id"/>
+
+			<div class="form-group">
+				<label asp-for="Name" class="control-label"></label>
+				<input asp-for="Name" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="Address" class="control-label"></label>
+				<input asp-for="Address" class="form-control"/>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="Mobile" class="control-label"></label>
+				<input asp-for="Mobile" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<input class="btn btn-primary" type="submit" value="save"/>
+
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index" >Back to List</a>
+</div>
