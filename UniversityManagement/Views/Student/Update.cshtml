@@ -1,0 +1,42 @@
+﻿@model UniversityManagement.Models.Student
+
+@{
+	ViewData["Title"] = "UpdateCourse";
+}
+
+<h1>Update student details</h1>
+
+<hr />
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Update">
+			<input type="hidden" asp-for="Id" />
+
+			<div class="form-group">
+				<label asp-for="StId" class="control-label"></label>
+				<input asp-for="StId" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="StFullName" class="control-label"></label>
+				<input asp-for="StFullName" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="StEnrollmentDate" class="control-label"></label>
+				<input asp-for="StEnrollmentDate" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<input class="btn btn-primary" type="submit" value="save" />
+			</div>
+
+		</form>
+	</div>
+</div>
+
+
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>

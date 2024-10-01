@@ -5,6 +5,7 @@ namespace UniversityManagement.Models
     public class Professor
 	{
 		[Key]
+        public int Id { get; set; }
         public int ProfessorId { get; set; }
 
 		public String ProfessorName { get; set; }

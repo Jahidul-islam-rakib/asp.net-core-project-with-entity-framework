@@ -4,12 +4,17 @@
 	ViewData["title"] = "Course List";
 }
 
+<div class="container mt-4">
+	<a class="btn btn-primary" asp-action="Create" role="button">Create Course</a>
+</div>
+
 <table class="table">
 	<thead>
 		<tr>
 			<th>Course ID</th>
 			<th>Course Name</th>
 			<th>Course Credit</th>
+			<th> Action</th>
 		</tr>
 	</thead>
 
@@ -20,6 +25,11 @@
 				<td>@item.CourseId</td>
 				<td>@item.CourseName</td>
 				<td>@item.CourseCredit</td>
+				<td>
+					<a class="btn btn-primary" asp-action="Update" asp-route-id="@item.Id">Edit</a>
+					<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+				</td>
 			</tr>
 		}
 	</tbody>

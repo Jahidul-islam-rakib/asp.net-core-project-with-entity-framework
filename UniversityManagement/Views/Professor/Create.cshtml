@@ -1,0 +1,39 @@
+﻿@model UniversityManagement.Models.Professor
+
+@{
+	ViewData["Title"] = "CreateProf";
+}
+
+<h1>Create a professor</h1>
+
+<hr />
+
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Create">
+			<div class="form-group">
+				<label asp-for="ProfessorName" class="control-label"></label>
+				<input asp-for="ProfessorName" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="PDepartment" class="control-labek"></label>
+				<input asp-for="PDepartment" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="PHireDate" class="control-label"></label>
+				<input asp-for="PHireDate" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>

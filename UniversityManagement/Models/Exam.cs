@@ -5,6 +5,7 @@ namespace UniversityManagement.Models
 	public class Exam
 	{
         [Key]
+        public int Id { get; set; }
         public int ExamId { get; set; }
         public String ExamName { get; set; }
         public String ExamDate { get; set; }
